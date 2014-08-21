@@ -1,0 +1,16 @@
+D:\CS\CSE136\SL136\BL\bin\Debug\136Service.dll
+D:\CS\CSE136\SL136\BL\bin\Debug\136Service.pdb
+D:\CS\CSE136\SL136\BL\bin\Debug\136IRepository.dll
+D:\CS\CSE136\SL136\BL\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\CS\CSE136\SL136\BL\bin\Debug\Microsoft.Practices.Unity.dll
+D:\CS\CSE136\SL136\BL\bin\Debug\Ninject.dll
+D:\CS\CSE136\SL136\BL\bin\Debug\POCO.dll
+D:\CS\CSE136\SL136\BL\bin\Debug\136IRepository.pdb
+D:\CS\CSE136\SL136\BL\bin\Debug\POCO.pdb
+D:\CS\CSE136\SL136\BL\bin\Debug\Microsoft.Practices.Unity.xml
+D:\CS\CSE136\SL136\BL\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\CS\CSE136\SL136\BL\bin\Debug\Ninject.pdb
+D:\CS\CSE136\SL136\BL\bin\Debug\Ninject.xml
+D:\CS\CSE136\SL136\BL\obj\Debug\Service.csprojResolveAssemblyReference.cache
+D:\CS\CSE136\SL136\BL\obj\Debug\136Service.dll
+D:\CS\CSE136\SL136\BL\obj\Debug\136Service.pdb

@@ -1,0 +1,4 @@
+D:\CS\CSE136\SL136\POCO\bin\Debug\POCO.dll
+D:\CS\CSE136\SL136\POCO\bin\Debug\POCO.pdb
+D:\CS\CSE136\SL136\POCO\obj\Debug\POCO.dll
+D:\CS\CSE136\SL136\POCO\obj\Debug\POCO.pdb

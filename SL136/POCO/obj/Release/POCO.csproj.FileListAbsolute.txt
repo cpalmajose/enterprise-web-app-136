@@ -1,0 +1,4 @@
+D:\CS\CSE136\SL136\POCO\bin\Release\POCO.dll
+D:\CS\CSE136\SL136\POCO\bin\Release\POCO.pdb
+D:\CS\CSE136\SL136\POCO\obj\Release\POCO.dll
+D:\CS\CSE136\SL136\POCO\obj\Release\POCO.pdb
