@@ -64,6 +64,28 @@ namespace Service
 
             this.repository.UpdateTaTutor(ta_tutor, ref errors);
         }
+<<<<<<< HEAD
 		
 	}
 }
+=======
+
+        public List<TaTutor> GetTutorList(ref List<string> errors)
+        {
+            return this.repository.GetTutorList(ref errors);
+        }
+		
+		public List<TaTutor> GetTutorByCourseSchedule (int course_schedule_id, ref List<string> errors)
+		{
+            if (string.IsNullOrEmpty(course_schedule_id))
+            {
+                errors.Add("Invalid Course Schedule id");
+                throw new ArgumentException();
+            }
+			
+			return this.repository.GetTutorByCourseSchedule(course_schedule_id, ref errors);
+		}
+		
+	}
+}
+>>>>>>> origin/developing
