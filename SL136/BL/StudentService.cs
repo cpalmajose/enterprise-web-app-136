@@ -161,11 +161,19 @@
                 errors.Add("Invalid student id");
                 throw new ArgumentException();
             }
+<<<<<<< HEAD
             else if (courseId < 0)
             {
                 errors.Add("Invalid course id");
                 throw new ArgumentException();
             }
+=======
+			else if (courseId == null)
+			{
+				errors.Add("Invalid course id");
+				throw new ArgumentException();
+			}
+>>>>>>> 043a75576166fabb5da4d5b72e150b8068d7bb81
 
             this.repository.DeleteCapeReview(studentId, courseId, ref errors);
         }

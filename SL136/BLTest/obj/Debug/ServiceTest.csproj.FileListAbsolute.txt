@@ -17,3 +17,22 @@ D:\CS\CSE136\SL136\BLTest\bin\Debug\Microsoft.Practices.Unity.xml
 D:\CS\CSE136\SL136\BLTest\obj\Debug\ServiceTest.csprojResolveAssemblyReference.cache
 D:\CS\CSE136\SL136\BLTest\obj\Debug\136ServiceTest.dll
 D:\CS\CSE136\SL136\BLTest\obj\Debug\136ServiceTest.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\obj\Debug\ServiceTest.csprojResolveAssemblyReference.cache
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\136ServiceTest.dll.config
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\136ServiceTest.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\136ServiceTest.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\136IRepository.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\136Service.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\Moq.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\POCO.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\136Service.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\136IRepository.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\POCO.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\Moq.xml
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\obj\Debug\136ServiceTest.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\obj\Debug\136ServiceTest.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\Ninject.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\Ninject.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\Ninject.xml
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\BLTest\bin\Debug\Microsoft.Practices.Unity.xml

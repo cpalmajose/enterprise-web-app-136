@@ -5,3 +5,10 @@ D:\CS\CSE136\SL136\IDAL\bin\Debug\POCO.pdb
 D:\CS\CSE136\SL136\IDAL\obj\Debug\IRepository.csprojResolveAssemblyReference.cache
 D:\CS\CSE136\SL136\IDAL\obj\Debug\136IRepository.dll
 D:\CS\CSE136\SL136\IDAL\obj\Debug\136IRepository.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\IDAL\bin\Debug\136IRepository.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\IDAL\bin\Debug\136IRepository.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\IDAL\bin\Debug\POCO.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\IDAL\bin\Debug\POCO.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\IDAL\obj\Debug\IRepository.csprojResolveAssemblyReference.cache
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\IDAL\obj\Debug\136IRepository.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\IDAL\obj\Debug\136IRepository.pdb
