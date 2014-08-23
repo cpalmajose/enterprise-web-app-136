@@ -2,3 +2,9 @@ D:\CS\CSE136\SL136\POCO\bin\Debug\POCO.dll
 D:\CS\CSE136\SL136\POCO\bin\Debug\POCO.pdb
 D:\CS\CSE136\SL136\POCO\obj\Debug\POCO.dll
 D:\CS\CSE136\SL136\POCO\obj\Debug\POCO.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\POCO\bin\Debug\POCO.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\POCO\bin\Debug\POCO.pdb
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\POCO\bin\Debug\Ninject.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\POCO\bin\Debug\Ninject.xml
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\POCO\obj\Debug\POCO.dll
+C:\Users\Andrew Farin\Desktop\CSE136-Project\SL136\POCO\obj\Debug\POCO.pdb

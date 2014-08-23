@@ -145,7 +145,7 @@
 		
 		public List<CapeReview> GetCapeReviews(string studentId, ref List<string> errors)
         {
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(studentId))
             {
                 errors.Add("Invalid student id");
                 throw new ArgumentException();
@@ -161,7 +161,7 @@
                 errors.Add("Invalid student id");
                 throw new ArgumentException();
             }
-			else if (string.IsNullOrEmpty(course_id))
+			else if (courseId == null)
 			{
 				errors.Add("Invalid course id");
 				throw new ArgumentException();
