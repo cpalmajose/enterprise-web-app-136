@@ -136,5 +136,22 @@
             Assert.AreEqual(0, errors.Count);
             Assert.AreEqual(true, gap > 3.2f && gap < 3.3f);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void DeleteCapeReviewErrorTest()
+        {
+            //// Arrange
+            var errors = new List<string>();
+
+            var mockRepository = new Mock<IStudentRepository>();
+            var studentService = new StudentService(mockRepository.Object);
+
+            //// Act
+            studentService.DeleteCapeReview(string.Empty, -1, ref errors);
+
+            //// Assert
+            Assert.AreEqual(2, errors.Count);
+        }
     }
 }

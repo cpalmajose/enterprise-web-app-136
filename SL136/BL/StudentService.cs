@@ -75,6 +75,7 @@
             }
 
             this.repository.DeleteStudent(id, ref errors);
+
         }
 
         public List<Student> GetStudentList(ref List<string> errors)
@@ -210,7 +211,7 @@
             else
             {
                 return false;
-            }      
+            }
         }
     }
 }
