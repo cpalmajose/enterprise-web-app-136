@@ -64,6 +64,11 @@ namespace Service
 
             this.repository.UpdateTaTutor(ta_tutor, ref errors);
         }
+<<<<<<< HEAD
+		
+	}
+}
+=======
 
         public List<TaTutor> GetTutorList(ref List<string> errors)
         {
@@ -83,3 +88,4 @@ namespace Service
 		
 	}
 }
+>>>>>>> origin/developing
