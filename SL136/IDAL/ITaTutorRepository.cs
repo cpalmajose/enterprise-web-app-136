@@ -12,6 +12,8 @@
 
         void UpdateTaTutor(TaTutor ta_tutor, ref List<string> errors);
 
+        TaTutor GetTaTutorInfo(string ta_tutor_id, ref List<string> errors);
+
         List<TaTutor> GetTutorList(ref List<string> errors);
 
         List<TaTutor> GetTutorByCourseSchedule(int course_schedule_id, ref List<string> errors);

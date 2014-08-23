@@ -17,6 +17,7 @@
         private const string UpdateTaInfoProcedure = "spUpdateTATutorInfo";
         private const string GetTaListProcedure = "spGetTaList";
         private const string GetTaScheduleByCourseProcedure = "spGetTaScheduleByCourse";
+        private const string GetTaTutorInfoProcedure = "spGetTaTutorInfo";
 
         public void InsertTaTutor(TaTutor ta_tutor, ref List<string> errors)
         {
@@ -169,6 +170,78 @@
             }
 
             return talist;
+        }
+
+        public TaTutor GetTaTutorInfo(string ta_tutor_id, ref List<string> errors)
+        {
+            TaTutor tatutor = null;
+            var connection = new SqlConnection(ConnectionString);
+            try
+            {
+                var adapter = new SqlDataAdapter(GetTaScheduleByCourseProcedure, connection)
+                {
+                    SelectCommand =
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    }
+                };
+
+                var dataSet = new DataSet();
+                adapter.Fill(dataSet);
+
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    return null;
+                }
+
+                tatutor = new TaTutor 
+                        {
+                            TaTutorId = dataSet.Tables[0].Rows[0]["id"].ToString(),
+                            FirstName = dataSet.Tables[0].Rows[0]["first"].ToString(),
+                            LastName = dataSet.Tables[0].Rows[0]["last"].ToString(),
+                            TaType = (TaType)
+                                        Enum.Parse(
+                                            typeof(TaType),
+                                            dataSet.Tables[0].Rows[0]["ta_type_id"].ToString())
+                        };
+
+                if (dataSet.Tables[1].Rows.Count > 0)
+                {
+                    tatutor.TaTutorSchedule = new List<Schedule>();
+                    for (int i = 0; i < dataSet.Tables[1].Rows.Count; i++)
+                    {
+                        var schedule = new Schedule
+                                {
+                                    ScheduleId = Convert.ToInt32(dataSet.Tables[1].Rows[i]["schedule_id"].ToString()),
+                                    Year = dataSet.Tables[1].Rows[i]["year"].ToString(),
+                                    Quarter = dataSet.Tables[1].Rows[i]["quarter"].ToString(),
+                                    Session = dataSet.Tables[1].Rows[i]["session"].ToString(),
+                                    Course = new Course
+                                            {
+                                                CourseId = dataSet.Tables[1].Rows[i]["course_id"].ToString(),
+                                                Title = dataSet.Tables[1].Rows[i]["course_title"].ToString(),
+                                                Description = dataSet.Tables[1].Rows[i]["course_description"].ToString(),
+                                                CourseLevel = 
+                                                    (CourseLevel)
+                                                    Enum.Parse(
+                                                        typeof(CourseLevel),
+                                                        dataSet.Tables[1].Rows[i]["course_level"].ToString())
+                                            },
+                                };
+                        tatutor.TaTutorSchedule.Add(schedule);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                errors.Add("Errors: " + e);
+            }
+            finally
+            {
+                connection.Dispose();
+            }
+
+            return tatutor;
         }
 
         public List<TaTutor> GetTutorByCourseSchedule(int course_schedule_id, ref List<string> errors)
