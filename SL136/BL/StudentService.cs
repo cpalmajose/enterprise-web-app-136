@@ -142,5 +142,34 @@
 
             return sum / enrollments.Count;
         }
+		
+		public List<CapeReview> GetCapeReviews(string studentId, ref List<string> errors)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                errors.Add("Invalid student id");
+                throw new ArgumentException();
+            }
+
+            return this.repository.GetCapeReviews(studentId, ref errors);
+        }
+
+        public void DeleteCapeReview(string studentId, int courseId, ref List<string> errors)
+        {
+            if (string.IsNullOrEmpty(studentId))
+            {
+                errors.Add("Invalid student id");
+                throw new ArgumentException();
+            }
+			else if (string.IsNullOrEmpty(course_id))
+			{
+				errors.Add("Invalid course id");
+				throw new ArgumentException();
+			}
+
+            this.repository.DeleteCapeReview(studentId, courseId, ref errors);
+        }
+		
+		
     }
 }
