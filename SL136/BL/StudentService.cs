@@ -142,10 +142,10 @@
 
             return sum / enrollments.Count;
         }
-		
-		public List<CapeReview> GetCapeReviews(string studentId, ref List<string> errors)
+
+        public List<CapeReview> GetCapeReviews(string studentId, ref List<string> errors)
         {
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(studentId))
             {
                 errors.Add("Invalid student id");
                 throw new ArgumentException();
@@ -161,15 +161,13 @@
                 errors.Add("Invalid student id");
                 throw new ArgumentException();
             }
-			else if (string.IsNullOrEmpty(course_id))
-			{
-				errors.Add("Invalid course id");
-				throw new ArgumentException();
-			}
+            else if (courseId < 0)
+            {
+                errors.Add("Invalid course id");
+                throw new ArgumentException();
+            }
 
             this.repository.DeleteCapeReview(studentId, courseId, ref errors);
         }
-		
-		
     }
 }

@@ -19,15 +19,15 @@ namespace ServiceTest
             //// Arrange
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
+            var tatutorService = new TaTutorService(mockRepository.Object);
 
             //// Act
-            taTutorService.InsertTaTutor(null, ref errors);
+            tatutorService.InsertTaTutor(null, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void InsertTaTutorErrorTest2()
@@ -35,16 +35,16 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = string.Empty };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = string.Empty };
 
             //// Act
-			taTutorService.InsertTaTutor(taTutor, ref errors);
+            tatutorService.InsertTaTutor(tatutor, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void DeleteTaTutorErrorTest()
@@ -53,15 +53,15 @@ namespace ServiceTest
             var errors = new List<string>();
 
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
+            var tatutorService = new TaTutorService(mockRepository.Object);
 
             //// Act
-            taTutorService.DeleteTaTutor(null, ref errors);
+            tatutorService.DeleteTaTutor(null, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void UpdateTaTutorErrorTest()
@@ -69,15 +69,15 @@ namespace ServiceTest
             //// Arrange
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
+            var tatutorService = new TaTutorService(mockRepository.Object);
 
             //// Act
-            taTutorService.UpdateTaTutor(null, ref errors);
+            tatutorService.UpdateTaTutor(null, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void UpdateTaTutorErrorTest2()
@@ -85,33 +85,14 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = string.Empty };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = string.Empty };
 
             //// Act
-			taTutorService.UpdateTaTutor(taTutor, ref errors);
+            tatutorService.UpdateTaTutor(tatutor, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
-        /*[TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void GetTutorbyCourseScheduleErrorTest()
-        {
-            //// Arranage
-            var errors = new List<string>();
-            var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            mockRepository.Setup(x => x.GetCourseList(ref errors)).Returns(new List<Course>());
-            var taTutor = new TaTutor { TaTutorId = string.Empty };
-
-            //// Act
-			taTutorService.GetTutorListByCourseSchedule(test_course_schedule_id, ref errors);
-
-            //// Assert
-            Assert.AreEqual(1, errors.Count);
-        }*/
-	}
+    }
 }
-

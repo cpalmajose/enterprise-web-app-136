@@ -13,9 +13,9 @@ namespace Service
         {
             this.repository = repository;
         }
-		
-		public void InsertTaTutor(TaTutor ta_tutor, ref List<string> errors)
-		{
+
+        public void InsertTaTutor(TaTutor ta_tutor, ref List<string> errors)
+        {
             if (ta_tutor == null)
             {
                 errors.Add("TA/Tutor cannot be null");
@@ -29,8 +29,8 @@ namespace Service
             }
 
             this.repository.InsertTaTutor(ta_tutor, ref errors);
-		}
-		
+        }
+
         public void DeleteTaTutor(string ta_tutor_id, ref List<string> errors)
         {
             if (string.IsNullOrEmpty(ta_tutor_id))
@@ -41,7 +41,7 @@ namespace Service
 
             this.repository.DeleteTaTutor(ta_tutor_id, ref errors);
         }
-		
+
         public void UpdateTaTutor(TaTutor ta_tutor, ref List<string> errors)
         {
             if (ta_tutor == null)
@@ -64,19 +64,14 @@ namespace Service
 
             this.repository.UpdateTaTutor(ta_tutor, ref errors);
         }
-<<<<<<< HEAD
-		
-	}
-}
-=======
 
         public List<TaTutor> GetTutorList(ref List<string> errors)
         {
             return this.repository.GetTutorList(ref errors);
         }
-		
-		public List<TaTutor> GetTutorByCourseSchedule (int course_schedule_id, ref List<string> errors)
-		{
+
+        public List<TaTutor> GetTutorByCourseSchedule(int course_schedule_id, ref List<string> errors)
+        {
             if (course_schedule_id < 0)
             {
                 errors.Add("Invalid Course Schedule id");
@@ -84,8 +79,6 @@ namespace Service
             }
 
             return this.repository.GetTutorByCourseSchedule(course_schedule_id, ref errors);
-		}
-		
-	}
+        }
+    }
 }
->>>>>>> origin/developing
