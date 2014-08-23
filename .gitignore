@@ -42,4 +42,7 @@ Thumbs.db
 *.sdo
 *.user
 *.StyleCop
+*.cache
+*.pdb
+*.Cache
 
