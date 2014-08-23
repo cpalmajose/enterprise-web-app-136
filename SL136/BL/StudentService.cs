@@ -2,9 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text.RegularExpressions;
     using IRepository;
     using POCO;
-    using System.Text.RegularExpressions;
+
 
     public class StudentService
     {
@@ -171,35 +172,46 @@
             this.repository.DeleteCapeReview(studentId, courseId, ref errors);
         }
 
-        public bool checkId(string input_id)
+        public bool CheckId(string input_id)
         {
             string strRegEx = @"[a-zA-Z0-9]{7,10}";
             Regex re = new Regex(strRegEx);
             if (re.IsMatch(input_id))
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }
         }
 
-        public bool checkName(string input_name)
+        public bool CheckName(string input_name)
         {
             string strRegex = @"[a-zA-Z]{3,15}";
             Regex re = new Regex(strRegex);
             if (re.IsMatch(input_name))
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }
         }
 
-        public bool checkType(int input_type)
+        public bool CheckType(int input_type)
         {
             string strRegex = @"[0-9]";
             Regex re = new Regex(strRegex);
             if (re.IsMatch(input_type.ToString()))
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }
         }
-
     }
 }
