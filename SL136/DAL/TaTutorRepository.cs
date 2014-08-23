@@ -171,7 +171,7 @@
             return talist;
         }
 
-        public List<TaTutor> GetTutorByCousrseSchedule(int course_schedule_id, ref List<string> errors)
+        public List<TaTutor> GetTutorByCourseSchedule(int course_schedule_id, ref List<string> errors)
         {
             var talist = new List<TaTutor>();
             var connection = new SqlConnection(ConnectionString);

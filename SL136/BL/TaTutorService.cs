@@ -33,7 +33,7 @@ namespace Service
 		
         public void DeleteTaTutor(string ta_tutor_id, ref List<string> errors)
         {
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(ta_tutor_id))
             {
                 errors.Add("Invalid TA/Tutor id");
                 throw new ArgumentException();
@@ -72,13 +72,13 @@ namespace Service
 		
 		public List<TaTutor> GetTutorByCourseSchedule (int course_schedule_id, ref List<string> errors)
 		{
-            if (string.IsNullOrEmpty(course_schedule_id))
+            if (course_schedule_id < 0)
             {
                 errors.Add("Invalid Course Schedule id");
                 throw new ArgumentException();
             }
-			
-			return this.repository.GetTutorByCourseSchedule(course_schedule_id, ref errors);
+
+            return this.repository.GetTutorByCourseSchedule(course_schedule_id, ref errors);
 		}
 		
 	}

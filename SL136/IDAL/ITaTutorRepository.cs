@@ -14,6 +14,6 @@
 
         List<TaTutor> GetTutorList(ref List<string> errors);
 
-        List<TaTutor> GetTutorByCousrseSchedule(int course_schedule_id, ref List<string> errors);
+        List<TaTutor> GetTutorByCourseSchedule(int course_schedule_id, ref List<string> errors);
     }
 }
