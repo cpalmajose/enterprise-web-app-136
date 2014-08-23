@@ -19,15 +19,15 @@ namespace ServiceTest
             //// Arrange
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
+            var tatutorService = new TaTutorService(mockRepository.Object);
 
             //// Act
-            taTutorService.InsertTaTutor(null, ref errors);
+            tatutorService.InsertTaTutor(null, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void InsertTaTutorErrorTest2()
@@ -35,11 +35,11 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = string.Empty };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = string.Empty };
 
             //// Act
-			taTutorService.InsertTaTutor(taTutor, ref errors);
+            tatutorService.InsertTaTutor(tatutor, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
@@ -51,11 +51,11 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = "A0123456", FirstName = "Jane", LastName = "Doe" };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = "A0123456", FirstName = "Jane", LastName = "Doe" };
 
             //// Act
-            taTutorService.InsertTaTutor(taTutor, ref errors);
+            tatutorService.InsertTaTutor(tatutor, ref errors);
 
             //// Assert
             Assert.AreEqual(0, errors.Count);
@@ -68,11 +68,11 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = "A012_3456", FirstName = "Jane", LastName = "Doe" };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = "A012_3456", FirstName = "Jane", LastName = "Doe" };
 
             //// Act
-            taTutorService.InsertTaTutor(taTutor, ref errors);
+            tatutorService.InsertTaTutor(tatutor, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
@@ -85,11 +85,11 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = "A0123456", FirstName = "J4ne", LastName = "Doe" };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = "A0123456", FirstName = "J4ne", LastName = "Doe" };
 
             //// Act
-            taTutorService.InsertTaTutor(taTutor, ref errors);
+            tatutorService.InsertTaTutor(tatutor, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
@@ -102,11 +102,11 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = "A0123456", FirstName = "Jane", LastName = "D0e" };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = "A0123456", FirstName = "Jane", LastName = "D0e" };
 
             //// Act
-            taTutorService.InsertTaTutor(taTutor, ref errors);
+            tatutorService.InsertTaTutor(tatutor, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
@@ -120,10 +120,10 @@ namespace ServiceTest
             var errors = new List<string>();
 
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
+            var tatutorService = new TaTutorService(mockRepository.Object);
 
             //// Act
-            taTutorService.DeleteTaTutor(null, ref errors);
+            tatutorService.DeleteTaTutor(null, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
@@ -135,12 +135,12 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = "A0123456", FirstName = "Jane", LastName = "Doe" };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = "A0123456", FirstName = "Jane", LastName = "Doe" };
 
             //// Act
-            taTutorService.InsertTaTutor(taTutor, ref errors);
-            taTutorService.DeleteTaTutor(taTutor.TaTutorId, ref errors);
+            tatutorService.InsertTaTutor(tatutor, ref errors);
+            tatutorService.DeleteTaTutor(tatutor.TaTutorId, ref errors);
 
             //// Assert
             Assert.AreEqual(0, errors.Count);
@@ -153,17 +153,17 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = "A0123456", FirstName = "Jane", LastName = "Doe" };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = "A0123456", FirstName = "Jane", LastName = "Doe" };
 
             //// Act
-            taTutorService.InsertTaTutor(taTutor, ref errors);
-            taTutorService.DeleteTaTutor("A01234_56", ref errors);
+            tatutorService.InsertTaTutor(tatutor, ref errors);
+            tatutorService.DeleteTaTutor("A01234_56", ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void UpdateTaTutorErrorTest()
@@ -171,15 +171,15 @@ namespace ServiceTest
             //// Arrange
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
+            var tatutorService = new TaTutorService(mockRepository.Object);
 
             //// Act
-            taTutorService.UpdateTaTutor(null, ref errors);
+            tatutorService.UpdateTaTutor(null, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void UpdateTaTutorErrorTest2()
@@ -187,16 +187,14 @@ namespace ServiceTest
             //// Arranage
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
-            var taTutorService = new TaTutorService(mockRepository.Object);
-            var taTutor = new TaTutor { TaTutorId = string.Empty };
+            var tatutorService = new TaTutorService(mockRepository.Object);
+            var tatutor = new TaTutor { TaTutorId = string.Empty };
 
             //// Act
-			taTutorService.UpdateTaTutor(taTutor, ref errors);
+            tatutorService.UpdateTaTutor(tatutor, ref errors);
 
             //// Assert
             Assert.AreEqual(1, errors.Count);
         }
-		
-	}
+    }
 }
-

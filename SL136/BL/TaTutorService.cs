@@ -2,9 +2,9 @@ namespace Service
 {
     using System;
     using System.Collections.Generic;
+    using System.Text.RegularExpressions;
     using IRepository;
     using POCO;
-    using System.Text.RegularExpressions;
 
     public class TaTutorService
     {
@@ -15,36 +15,48 @@ namespace Service
             this.repository = repository;
         }
 
-        public bool checkId(string input_id)
+        public bool CheckId(string input_id)
         {
             string strRegEx = @"[a-zA-Z0-9]{7,10}";
             Regex re = new Regex(strRegEx);
             var flag = re.IsMatch(input_id);
             Console.WriteLine(flag);
             if (re.IsMatch(input_id))
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }  
         }
 
-        public bool checkName(string input_name)
+        public bool CheckName(string input_name)
         {
             string strRegex = @"[a-zA-Z]{3,15}";
             Regex re = new Regex(strRegex);
             if (re.IsMatch(input_name))
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }   
         }
 
-        public bool checkType(int input_type)
+        public bool CheckType(int input_type)
         {
             string strRegex = @"[0-9]";
             Regex re = new Regex(strRegex);
             if (re.IsMatch(input_type.ToString()))
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }   
         }
 
         public void InsertTaTutor(TaTutor ta_tutor, ref List<string> errors)
@@ -54,35 +66,37 @@ namespace Service
                 errors.Add("TA/Tutor cannot be null");
                 throw new ArgumentException();
             }
-            if ((ta_tutor.TaTutorId.Length < 6) || (ta_tutor.TaTutorId.Length > 11))
-            {
-                errors.Add("Invalid TA/Tutor ID");
-                throw new ArgumentException();
-            }
-            if (!(this.checkId(ta_tutor.TaTutorId)))
+
+            if (ta_tutor.TaTutorId.Length < 6 || ta_tutor.TaTutorId.Length > 11)
             {
                 errors.Add("Invalid TA/Tutor ID");
                 throw new ArgumentException();
             }
 
-            if(!(this.checkName(ta_tutor.FirstName)))
+            if (!this.CheckId(ta_tutor.TaTutorId))
+            {
+                errors.Add("Invalid TA/Tutor ID");
+                throw new ArgumentException();
+            }
+
+            if (!this.CheckName(ta_tutor.FirstName))
             {
                 errors.Add("Invalid first name");
                 throw new ArgumentException();
             }
 
-            if(!this.checkName(ta_tutor.LastName))
+            if (!this.CheckName(ta_tutor.LastName))
             {
                 errors.Add("Invalid last name");
                 throw new ArgumentException();
             }
 
-            if(((int) ta_tutor.TaType) < 0 || ((int)ta_tutor.TaType) > 2)
+            if ((int)ta_tutor.TaType < 0 || (int)ta_tutor.TaType > 2)
             {
                 errors.Add("Invalid ta/tutor type");
                 throw new ArgumentException(); 
             }
-            else if(!this.checkType(((int)ta_tutor.TaType)))
+            else if (!this.CheckType((int)ta_tutor.TaType))
             {
                 errors.Add("Invalid ta/tutor type");
                 throw new ArgumentException();
@@ -98,12 +112,14 @@ namespace Service
                 errors.Add("Invalid TA/Tutor id");
                 throw new ArgumentException();
             }
-            if ((ta_tutor_id.Length < 6) || (ta_tutor_id.Length > 11))
+
+            if (ta_tutor_id.Length < 6 || ta_tutor_id.Length > 11)
             {
                 errors.Add("Invalid TA/Tutor ID");
                 throw new ArgumentException();
             }
-            if (!(this.checkId(ta_tutor_id)))
+
+            if (!this.CheckId(ta_tutor_id))
             {
                 errors.Add("Invalid TA/Tutor ID");
                 throw new ArgumentException();
@@ -126,35 +142,36 @@ namespace Service
                 throw new ArgumentException();
             }
 
-            if ((ta_tutor.TaTutorId.Length < 6) || (ta_tutor.TaTutorId.Length > 11))
-            {
-                errors.Add("Invalid TA/Tutor ID");
-                throw new ArgumentException();
-            }
-            if (!(this.checkId(ta_tutor.TaTutorId)))
+            if (ta_tutor.TaTutorId.Length < 6 || ta_tutor.TaTutorId.Length > 11)
             {
                 errors.Add("Invalid TA/Tutor ID");
                 throw new ArgumentException();
             }
 
-            if (!(this.checkName(ta_tutor.FirstName)))
+            if (!this.CheckId(ta_tutor.TaTutorId))
+            {
+                errors.Add("Invalid TA/Tutor ID");
+                throw new ArgumentException();
+            }
+
+            if (!this.CheckName(ta_tutor.FirstName))
             {
                 errors.Add("Invalid first name");
                 throw new ArgumentException();
             }
 
-            if (!this.checkName(ta_tutor.LastName))
+            if (!this.CheckName(ta_tutor.LastName))
             {
                 errors.Add("Invalid last name");
                 throw new ArgumentException();
             }
 
-            if (((int)ta_tutor.TaType) < 0 || ((int)ta_tutor.TaType) > 2)
+            if ((int)ta_tutor.TaType < 0 || (int)ta_tutor.TaType > 2)
             {
                 errors.Add("Invalid ta/tutor type");
                 throw new ArgumentException();
             }
-            else if (!this.checkType(((int)ta_tutor.TaType)))
+            else if (!this.CheckType((int)ta_tutor.TaType))
             {
                 errors.Add("Invalid ta/tutor type");
                 throw new ArgumentException();
