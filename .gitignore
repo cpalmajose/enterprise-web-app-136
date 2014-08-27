@@ -44,4 +44,6 @@ Thumbs.db
 *.pdb
 *.txt
 *.force
+*/obj/Release/*.cache
+*/obj/Debug/*.cache
 
