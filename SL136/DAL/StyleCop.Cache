@@ -204,6 +204,9 @@
   <project key="1405120135">
     <configuration>DEBUG;TRACE</configuration>
   </project>
+  <project key="-367051910">
+    <configuration>TRACE</configuration>
+  </project>
   <sourcecode name="AuthorizeRepository.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014/04/01 10:18:24.000</styleCop>
@@ -365,7 +368,4 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="-367051910">
-    <configuration>TRACE</configuration>
-  </project>
 </stylecopresultscache>

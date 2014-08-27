@@ -41,10 +41,7 @@ Thumbs.db
 *.suo
 *.sdo
 *.user
-*.StyleCop
-*.cache
 *.pdb
-*.Cache
 *.txt
 *.force
 

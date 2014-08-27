@@ -125,6 +125,12 @@ namespace Service
                 throw new ArgumentException();
             }
 
+            if(this.repository.GetTaTutorInfo(ta_tutor_id, ref errors) == null)
+            {
+                errors.Add("TA/Tutor doesn't exist");
+                throw new Exception();
+            }
+
             this.repository.DeleteTaTutor(ta_tutor_id, ref errors);
         }
 

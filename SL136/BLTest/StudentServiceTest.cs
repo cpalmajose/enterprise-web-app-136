@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text.RegularExpressions;
 
     using IRepository;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
