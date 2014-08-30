@@ -80,11 +80,23 @@ define(['Models/StudentModel'], function (StudentModel) {
                     email: result.Email,
                     shoesize: result.ShoeSize,
                     weight: result.Weight,
-                    ssn: result.SSN
+                    ssn: result.SSN,
                 };
+
+                // added
+                var enrolled = new Array();
+                for (var i = 0; i < result.Enrolled.length; i++) {
+                    enrolled[i] = {
+                        year: result.Enrolled[i].Year,
+                        quarter: result.Enrolled[i].Quarter,
+                        title: result.Enrolled[i].Course.Title,
+                        detail: result.Enrolled[i].Course.Description
+                    }
+                }
 
                 if (initialBind) {
                     ko.applyBindings({ viewModel: student }, document.getElementById("divStudentContent"));
+                    ko.applyBindings({ viewModel: enrolled }, document.getElementById("test"))  // added
                 }
             });
         };
