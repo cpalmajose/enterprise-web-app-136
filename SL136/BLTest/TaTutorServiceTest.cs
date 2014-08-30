@@ -204,16 +204,16 @@ namespace ServiceTest
             var errors = new List<string>();
             var mockRepository = new Mock<ITaTutorRepository>();
             var tatutorService = new TaTutorService(mockRepository.Object);
-            var taTutorList = new List<TaTutor>();
-            taTutorList.Add(new TaTutor { TaTutorId = "A0123456", FirstName = "Tony", LastName = "Stark" });
-            taTutorList.Add(new TaTutor { TaTutorId = "A0987655", FirstName = "John", LastName = "Smith" });
-            mockRepository.Setup(x => x.GetTutorList(ref errors)).Returns(taTutorList);
+            var tatutorList = new List<TaTutor>();
+            tatutorList.Add(new TaTutor { TaTutorId = "A0123456", FirstName = "Tony", LastName = "Stark" });
+            tatutorList.Add(new TaTutor { TaTutorId = "A0987655", FirstName = "John", LastName = "Smith" });
+            mockRepository.Setup(x => x.GetTutorList(ref errors)).Returns(tatutorList);
 
             //// Act
             var otherList = tatutorService.GetTutorList(ref errors);
 
             //// Assert
-            Assert.AreEqual(taTutorList, otherList);
+            Assert.AreEqual(tatutorList, otherList);
         }
     }
 }

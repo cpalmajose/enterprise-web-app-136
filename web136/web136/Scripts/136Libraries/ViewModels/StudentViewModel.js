@@ -87,6 +87,7 @@ define(['Models/StudentModel'], function (StudentModel) {
                 var enrolled = new Array();
                 for (var i = 0; i < result.Enrolled.length; i++) {
                     enrolled[i] = {
+                        id: result.Enrolled[i].ScheduleId,
                         year: result.Enrolled[i].Year,
                         quarter: result.Enrolled[i].Quarter,
                         title: result.Enrolled[i].Course.Title,

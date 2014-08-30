@@ -125,7 +125,7 @@ namespace Service
                 throw new ArgumentException();
             }
 
-            if(this.repository.GetTaTutorInfo(ta_tutor_id, ref errors) == null)
+            if (this.repository.GetTaTutorInfo(ta_tutor_id, ref errors) == null)
             {
                 errors.Add("TA/Tutor doesn't exist");
                 throw new Exception();
@@ -191,15 +191,22 @@ namespace Service
             return this.repository.GetTutorList(ref errors);
         }
 
-        public List<TaTutor> GetTutorByCourseSchedule(int course_schedule_id, ref List<string> errors)
+        public List<TaTutor> GetTutorByCourseSchedule(string course_schedule_id, ref List<string> errors)
         {
-            if (course_schedule_id < 0)
+            int csid;
+            if (!Int32.TryParse(course_schedule_id, out csid))
             {
                 errors.Add("Invalid Course Schedule id");
                 throw new ArgumentException();
             }
 
-            return this.repository.GetTutorByCourseSchedule(course_schedule_id, ref errors);
+            if (csid < 0)
+            {
+                errors.Add("Invalid Course Schedule id");
+                throw new ArgumentException();
+            }
+
+            return this.repository.GetTutorByCourseSchedule(csid, ref errors);
         }
     }
 }

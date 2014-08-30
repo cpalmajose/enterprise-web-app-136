@@ -43,7 +43,7 @@ namespace WebApi136.Controllers
         }
 
         [HttpGet]
-        public List<TaTutor> GetTutorByCourseSchedule(int course_schedule_id)
+        public List<TaTutor> GetTutorByCourseSchedule(string course_schedule_id)
         {
             return this.service.GetTutorByCourseSchedule(course_schedule_id, ref this.errors);
         }
