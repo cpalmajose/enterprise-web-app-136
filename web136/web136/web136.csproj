@@ -137,6 +137,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JasmineTestController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
@@ -229,6 +230,15 @@
     <Content Include="Scripts\136Libraries\ViewModels\StudentViewModel.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Jasmine\lib\jasmine-2.0.0\boot.js" />
+    <Content Include="Scripts\Jasmine\lib\jasmine-2.0.0\console.js" />
+    <Content Include="Scripts\Jasmine\lib\jasmine-2.0.0\jasmine-html.js" />
+    <Content Include="Scripts\Jasmine\lib\jasmine-2.0.0\jasmine.css" />
+    <Content Include="Scripts\Jasmine\lib\jasmine-2.0.0\jasmine.js" />
+    <Content Include="Scripts\Jasmine\lib\jasmine-2.0.0\jasmine_favicon.png" />
+    <Content Include="Scripts\Jasmine\spec\SeminarSpec.js" />
+    <Content Include="Scripts\Jasmine\spec\SpecHelper.js" />
+    <Content Include="Scripts\Jasmine\spec\StudentSpec.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
@@ -275,6 +285,7 @@
     <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Shared\SharedEditStudent.cshtml" />
+    <Content Include="Views\JasmineTest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
