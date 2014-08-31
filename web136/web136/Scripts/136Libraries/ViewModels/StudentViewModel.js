@@ -90,6 +90,7 @@ define(['Models/StudentModel'], function (StudentModel) {
                         id: result.Enrolled[i].ScheduleId,
                         year: result.Enrolled[i].Year,
                         quarter: result.Enrolled[i].Quarter,
+                        courseId: result.Enrolled[i].Course.CourseId,
                         title: result.Enrolled[i].Course.Title,
                         detail: result.Enrolled[i].Course.Description
                     }

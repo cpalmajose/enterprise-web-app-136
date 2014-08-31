@@ -194,7 +194,7 @@ namespace Service
         public List<TaTutor> GetTutorByCourseSchedule(string course_schedule_id, ref List<string> errors)
         {
             int csid;
-            if (!Int32.TryParse(course_schedule_id, out csid))
+            if (!int.TryParse(course_schedule_id, out csid))
             {
                 errors.Add("Invalid Course Schedule id");
                 throw new ArgumentException();

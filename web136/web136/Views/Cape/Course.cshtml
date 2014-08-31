@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Cape";
+    var id = ViewBag.Id;
+}
+
+<h2>Cape Course Details</h2>
+<div id="divCapeDetails">
+    <table>
+        <thead>
+            <tr>
+                <td>Quarter</td>
+                <td>Year</td>
+                <td>Instructor</td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+                <td>F</td>
+                <td>Total</td>
+                <td>Average</td>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: viewModel">
+            <tr>
+                <td data-bind="text: quarter"></td>
+                <td data-bind="text: year"></td>
+                <td data-bind="text: instructor"></td>
+                <td data-bind="text: a"></td>
+                <td data-bind="text: b"></td>
+                <td data-bind="text: c"></td>
+                <td data-bind="text: d"></td>
+                <td data-bind="text: f"></td>
+                <td data-bind="text: total"></td>
+                <td data-bind="text: avg"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- AJAX-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        require(['ViewModels/CapeViewModel'], function (capeViewModel) {
+            var capeViewModelObj = new capeViewModel();
+            capeViewModelObj.GetCapeByCourse("@ViewBag.course_id");
+        });
+    });
+</script>

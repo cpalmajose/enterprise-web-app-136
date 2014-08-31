@@ -59,6 +59,5 @@
         {
             this.service.DropEnrolledSchedule(studentId, scheduleId, ref this.errors);
         }
-
     }
 }

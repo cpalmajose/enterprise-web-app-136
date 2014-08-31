@@ -6,7 +6,7 @@
 
         public string Quarter { get; set; }
 
-        public int Year { get; set; }
+        public string Year { get; set; }
 
         public Course Course { get; set; }
 

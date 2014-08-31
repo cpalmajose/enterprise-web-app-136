@@ -371,7 +371,7 @@
                     {
                         CourseScheduleId = Convert.ToInt32(dataSet.Tables[0].Rows[i]["course_schedule_id"].ToString()),
                         Quarter = dataSet.Tables[0].Rows[i]["quarter"].ToString(),
-                        Year = Convert.ToInt32(dataSet.Tables[0].Rows[i]["year"].ToString()),
+                        Year = dataSet.Tables[0].Rows[i]["year"].ToString(),
                         Course = new Course 
                         {
                             Title = dataSet.Tables[0].Rows[i]["course_title"].ToString(),

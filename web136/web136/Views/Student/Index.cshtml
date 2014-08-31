@@ -64,8 +64,6 @@
     </table>
 </div>
 
-@Html.Partial("SharedStudentEnrollment")
-
 <script type="text/javascript">
     $(document).ready(function () {
         require(['ViewModels/StudentViewModel'], function (studentViewModel) {
@@ -78,4 +76,5 @@
 <script type="text/html" id="action-template">
     <a>Drop</a> <!-- TODO -->
     <a data-bind="attr: { href : '/Tutor/TutorBySchedule?id=' + id, title: 'tutors' }">Tutors</a>
+    <a data-bind="attr: { href : '/Cape/Course?id=' + courseId, title: 'Cape'}">Cape</a>
 </script>
